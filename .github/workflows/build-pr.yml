@@ -30,4 +30,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm
           push: false
-          tags: ghcr.io/${{ env.REPO }}::pr-${{ github.event.number }}
+          tags: ghcr.io/${{ env.REPO }}:pr-${{ github.event.number }}
