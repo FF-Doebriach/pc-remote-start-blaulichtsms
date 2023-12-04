@@ -1,5 +1,5 @@
 coloredlogs==15.0.1
-humanize==4.8.0
+humanize==4.9.0
 fastapi==0.104.1
 fastapi-utils==0.2.1
 python-decouple==3.8
