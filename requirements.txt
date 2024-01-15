@@ -1,6 +1,6 @@
 coloredlogs==15.0.1
 humanize==4.9.0
-fastapi==0.108.0
+fastapi==0.109.0
 fastapi-utils==0.2.1
 python-decouple==3.8
 pytz==2023.3.post1
