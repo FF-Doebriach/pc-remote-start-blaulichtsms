@@ -2,7 +2,7 @@
 FROM python:3.12-alpine as builder
 WORKDIR /usr/src/app
 
-RUN apk add --no-cache --update gcc libc-dev linux-headers alpine-sdk git && rm -rf /var/cache/apk/*
+RUN apk add --no-cache --update gcc gcc-arm-none-eabi libc-dev linux-headers curl gcc alpine-sdk git rust cargo && rm -rf /var/cache/apk/*
 
 COPY .git .
 COPY .env.template .
@@ -13,6 +13,7 @@ RUN sed -i "s/%VER%/$(git describe --always --abbrev | sed 's/-/./')/" .env
 RUN adduser -s /bin/bash -S service
 USER service
 COPY requirements.txt ./
+RUN pip3 install --no-cache-dir setuptools_rust 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # main container
