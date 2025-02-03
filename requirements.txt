@@ -3,7 +3,7 @@ humanize==4.11.0
 fastapi==0.115.7
 fastapi-utils==0.8.0
 python-decouple==3.8
-pytz==2024.2
+pytz==2025.1
 requests==2.32.3
 uvicorn==0.34.0
 verboselogs==1.7
